@@ -3,7 +3,7 @@ import { TextDivider } from "../../components/TextDivider";
 
 export const SignUp = () => {
   return (
-    <section className="my-7 flex flex-col justify-center">
+    <section className="my-7 flex flex-col justify-center ">
       {/* sign up */}
       <div>
         <div className="flex gap-2 justify-center my-2">

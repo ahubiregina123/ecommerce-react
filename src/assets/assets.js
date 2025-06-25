@@ -62,8 +62,10 @@ import ellipse_black from "./Ellipse 651.png";
 import logo from "./logo.png";
 import ellipse_green from "./Ellipse 653.png";
 import rectangle_1 from "./rectangle_1.png";
+import menu_icon from "./menu_icon.png";
 
 export const assets = {
+  menu_icon,
   rectangle_1,
   logo,
   ellipse_black,

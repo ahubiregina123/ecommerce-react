@@ -6,15 +6,17 @@ import { TextDivider } from "./TextDivider";
 
 const Nav = () => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
   const [page, setPage] = useState("");
   const [navStyle, setNavSytle] = useState(false);
   return (
     <header className="">
       <div className="flex justify-between my-2 ">
-        <div className="lg:w-[100px] flex- w-[50px]">
+        <div className="lg:w-[100px] flex w-[70px]">
           <img src={assets.logo} alt="" />
         </div>
-        <ul className="flex lg:text-[20px] gap-2 text-[12px] lg:gap-4  uppercase">
+        <ul className="lg:flex hidden lg:text-[20px] gap-2 text-[12px] lg:gap-4  uppercase">
           <NavLink className="navLink" to={"/"}>
             <li onClick={() => setPage("home")} className="cursor-pointer">
               home
@@ -40,28 +42,39 @@ const Nav = () => {
           </NavLink>
         </ul>
         <div className="flex flex-col  gap-3 justify-center items-center">
-          <div className="flex justify-center gap-4 items-center">
-            <img
-              className="cursor-pointer w-[12px] lg:w-[20px] lg:h-[20px] justify-center items-center"
-              src={assets.search_icon}
-              alt=""
-            />
-
-            <img
-              onClick={() => {
-                setShowProfileMenu(!showProfileMenu);
-              }}
-              className="cursor-pointer w-[20px] h-[20px] justify-center items-center"
-              src={assets.profile_icon}
-              alt=""
-            />
-
-            <img
-              className="cursor-pointer w-[20px] h-[20px] justify-center items-center"
-              src={assets.vector}
-              alt=""
-            />
+          <div className="flex justify-center gap-8 items-center">
+            <div className="flex justify-center gap-4 items-center">
+              <img
+                className="cursor-pointer w-[20px] lg:w-[20px] lg:h-[20px] justify-center items-center"
+                src={assets.search_icon}
+                alt=""
+              />
+              <img
+                onClick={() => {
+                  setShowProfileMenu(!showProfileMenu);
+                }}
+                className="cursor-pointer w-[20px] h-[20px] justify-center items-center"
+                src={assets.profile_icon}
+                alt=""
+              />
+              <img
+                className="cursor-pointer w-[20px] h-[20px] justify-center items-center"
+                src={assets.vector}
+                alt=""
+              />
+            </div>
+            <div className="lg:hidden">
+              <img
+                onClick={() => {
+                  setShowMenu(!showMenu);
+                }}
+                className="cursor-pointer w-[20px] h-[20px] justify-center items-center"
+                src={assets.menu_icon}
+                alt=""
+              />
+            </div>
           </div>
+
           <div className="absolute top-[6%]">
             {showProfileMenu && (
               <ul className="bg-[#F8F8F8] text-[16px]  py-1.5 px-2.5  w-[170px]  ">
@@ -75,6 +88,27 @@ const Nav = () => {
                 </NavLink>
                 <NavLink to={"/product-page"}>
                   <li>Product Page</li>
+                </NavLink>
+              </ul>
+            )}
+          </div>
+          <div className="absolute top-[6%]">
+            {showMenu && (
+              <ul className="bg-[#F8F8F8] text-[16px]  py-1.5 px-2.5  w-[170px]  ">
+                <NavLink to={"/"}>
+                  <li className="cursor-pointer">Home</li>
+                </NavLink>
+                <NavLink to={"/collection"}>
+                  <li className="cursor-pointer">Collection</li>
+                </NavLink>
+                <NavLink to={"/about"}>
+                  <li className="cursor-pointer">About</li>
+                </NavLink>
+                <NavLink to={"/contact-us"}>
+                  <li className="cursor-pointer "> Contact</li>
+                </NavLink>
+                <NavLink to={"/sign-up"}>
+                  <li>Sign Up</li>
                 </NavLink>
               </ul>
             )}

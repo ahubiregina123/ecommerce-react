@@ -104,4 +104,8 @@ const Home = () => {
   );
 };
 
+// Issue at hand: dynamic linking;
+// making the product page unigue to a particular product
+// depending on the product clicked on
+
 export default Home;
