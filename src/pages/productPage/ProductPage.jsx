@@ -15,8 +15,6 @@ export const ProductPage = () => {
     return collection.description == description;
   });
 
-  console.log(relatedProducts);
-
   return (
     <section className="my-9">
       <div className="flex lg:flex-row flex-col gap-6">

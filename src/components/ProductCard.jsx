@@ -7,7 +7,9 @@ const ProductCard = ({ image, description, price, id }) => {
   return (
     <div
       onClick={() => {
-        navigate({ pathname: `/product-page/${id}` });
+        navigate({ pathname: `/product-page/${id}` }
+          , scrollTo(0,0)
+        );
       }}
       className="hover:scale-110 transition duration-[0.5s] "
     >
