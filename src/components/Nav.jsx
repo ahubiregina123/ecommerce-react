@@ -20,7 +20,7 @@ const Nav = () => {
           <NavLink className="navLink" to={"/"}>
             <li onClick={() => setPage("home")} className="cursor-pointer">
               home
-              {console.log(page)}
+              {/* {console.log(page)} */}
             </li>
             {/* {page === "home" ? <div className="bg-black absolute right-[20%] w-9  h-[3px]"  />} */}
           </NavLink>
@@ -86,9 +86,6 @@ const Nav = () => {
                 <NavLink to={"/delivery-info"}>
                   <li className="cursor-pointer "> Delivery Information</li>
                 </NavLink>
-                <NavLink to={"/product-page"}>
-                  <li>Product Page</li>
-                </NavLink>
               </ul>
             )}
           </div>
@@ -120,9 +117,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-// const ProfileMenu = () => {
-//   return (
-
-//   );
-// };

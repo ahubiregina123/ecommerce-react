@@ -11,7 +11,6 @@ import img_3 from "./img-3.png";
 import img_4 from "./img-4.png";
 import p_img48 from "./p_img48.png";
 import img_5 from "./img-5.png";
-import img_12 from "./img_12.png";
 import img_20 from "./img_20.png";
 import img_23 from "./img_23.png";
 import img_25 from "./img_25.png";
@@ -118,7 +117,6 @@ export const assets = {
   img_65,
   img_23,
   img_20,
-  img_12,
   img_45,
   img_50,
   bin_icon,
@@ -380,46 +378,18 @@ export const allCollections = [
     description: "Women Zip-Front Relaxed Fit Jacket",
     price: "$139",
   },
-  {
-    id: "prod_27",
-    image: p_img3,
-    description: "Girl Round Neck Cotton Top",
-    price: "$139",
-  },
+
   {
     id: "prod_28",
     image: p_img28,
     description: "Men Slim Fit Relaxed Denim Jacket",
     price: "$149",
   },
-  {
-    id: "prod_28",
-    image: img_4,
-    description: "Women Round Neck Cotton Top",
-    price: "$99",
-  },
-  {
-    id: "prod_29",
-    image: p_img6,
-    description: "Girl Round Neck Cotton Top",
-    price: "$129",
-  },
+
   {
     id: "prod_30",
     image: img_5,
     description: "Men Round Neck Pure Cotton T-shirt ",
-    price: "$139",
-  },
-  {
-    id: "prod_31",
-    image: img_65,
-    description: "Men Round Neck Pure Cotton T-shirt",
-    price: "$169",
-  },
-  {
-    id: "prod_32",
-    image: p_img9,
-    description: "Girls Round Neck Cotton Top",
     price: "$139",
   },
   {
@@ -441,18 +411,6 @@ export const allCollections = [
     price: "$149",
   },
   {
-    id: "prod_36",
-    image: img_1,
-    description: "Women Round Neck Cotton Top",
-    price: "$149",
-  },
-  {
-    id: "prod_37",
-    image: p_img14,
-    description: "Boy Round Neck Pure Cotton T-shirt ",
-    price: "$139",
-  },
-  {
     id: "prod_38",
     image: img_50,
     description: "Men Printed Plain Cotton Shirt",
@@ -469,12 +427,6 @@ export const allCollections = [
     image: img_20,
     description: "Men Rounded Neck Pure Cotton Shirt",
     price: "$119",
-  },
-  {
-    id: "prod_41",
-    image: p_img18,
-    description: "Boy Round Neck Pure Cotton T-shirt",
-    price: "$139",
   },
   {
     id: "prod_42",

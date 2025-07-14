@@ -1,24 +1,39 @@
-import { assets, bestSellers, sizes } from "../../assets/assets";
+import {
+  allCollections,
+  assets,
+  bestSellers,
+  sizes,
+} from "../../assets/assets";
 import ProductCard from "../../components/ProductCard";
 import { useParams } from "react-router";
+import useFilter from "../../hookes/useFilter";
 export const ProductPage = () => {
+  const { product, description } = useFilter();
+  // console.log(description);
+
+  const relatedProducts = allCollections.filter((collection) => {
+    return collection.description == description;
+  });
+
+  console.log(relatedProducts);
+
   return (
-    <section>
+    <section className="my-9">
       <div className="flex lg:flex-row flex-col gap-6">
         <div className="flex gap-3 ">
           <div className=" flex lg:w-[95px] lg:h-[100px] w-[80px] flex-col gap-2">
-            <img className="w-full" src={assets.img_25} alt="" />
-            <img className="w-full" src={assets.img_25} alt="" />
-            <img className="w-full" src={assets.img_25} alt="" />
-            <img className="w-full" src={assets.img_25} alt="" />
+            <img className="w-full" src={product.image} alt="" />
+            <img className="w-full" src={product.image} alt="" />
+            <img className="w-full" src={product.image} alt="" />
+            <img className="w-full" src={product.image} alt="" />
           </div>
           <div className="lg:w-[400px] lg:h-[400px] w-[345px]">
-            <img className="w-full" src={assets.img_25} alt="" />
+            <img className="w-full" src={product.image} alt="" />
           </div>
         </div>
         <div className=" flex flex-col gap-2 ">
           <h1 className="lg:text-[25px] text-[20px] font-medium">
-            Men Round Neck Pure Cotton T-shirt
+            {product.description}
           </h1>
           <div className="flex gap-3">
             <img
@@ -48,7 +63,9 @@ export const ProductPage = () => {
             />
             <p className="font-medium">(122)</p>
           </div>
-          <p className="lg:text-[25px] text-[17px] font-medium">$149</p>
+          <p className="lg:text-[25px] text-[17px] font-medium">
+            {product.price}
+          </p>
           <p>
             A light weight, usually kniited, pullover shirt, close-fitting and
             with a round neckline and short sleeves, worn as an undershirt or
@@ -58,7 +75,7 @@ export const ProductPage = () => {
             <h3 className="font-medium text-[19px]">Select Size</h3>
             <div className="flex gap-2">
               {sizes.map((size) => (
-                <SizeBtn size={size} />
+                <SizeBtn size={size} key={size} />
               ))}
             </div>
             <button className="border py-2 px-4 uppercase cursor-pointer text-white bg-black w-[180px] my-2">
@@ -111,12 +128,13 @@ export const ProductPage = () => {
           <img className="w-[50px] h-[3px]" src={assets.rectangle_1} alt="" />
         </div>
         <div className=" gap-3 w-[1000px] grid grid-cols-2 lg:grid-cols-5 ">
-          {bestSellers.map((related) => (
+          {relatedProducts.map((related) => (
             <ProductCard
               image={related.image}
               description={related.description}
               price={related.price}
               id={related.id}
+              key={related.id}
             />
           ))}
         </div>

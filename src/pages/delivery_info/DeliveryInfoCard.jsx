@@ -48,7 +48,7 @@ export const DeliveryInfoCard = () => {
         />
       </div>
       <input
-        className="border outline-none rounded-sm py-2 px-2 border-gray-400 w-[360px]lg:w-[650px] lg:flex  "
+        className="border outline-none rounded-sm py-2 px-2 border-gray-400 w-[360px] lg:w-[650px] lg:flex "
         type="text"
         placeholder="Phone"
       />

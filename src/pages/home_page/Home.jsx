@@ -11,7 +11,7 @@ const Home = () => {
         <div className="flex-1/2 flex flex-col justify-center py-12 px-6 lg:px-40">
           <div className="flex gap-2   items-center">
             <img className="w-[50px] h-[3px]" src={assets.rectangle_1} alt="" />
-            <p className="uppercase lg:text-[15px] text-[12px] font-medium">
+            <p className="uppercase text-[15px]  font-medium">
               our bestsellers
             </p>
           </div>
