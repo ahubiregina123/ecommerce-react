@@ -1,8 +1,6 @@
 import { NavLink } from "react-router";
 import { assets } from "../assets/assets";
-import Divider from "./Divider";
 import { useState } from "react";
-import { TextDivider } from "./TextDivider";
 
 const Nav = () => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
@@ -57,11 +55,13 @@ const Nav = () => {
                 src={assets.profile_icon}
                 alt=""
               />
-              <img
-                className="cursor-pointer w-[20px] h-[20px] justify-center items-center"
-                src={assets.vector}
-                alt=""
-              />
+              <NavLink to={"/my-cart"}>
+                <img
+                  className="cursor-pointer w-[20px] h-[20px]  justify-center items-center"
+                  src={assets.vector}
+                  alt=""
+                />
+              </NavLink>
             </div>
             <div className="lg:hidden">
               <img

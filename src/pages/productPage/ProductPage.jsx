@@ -76,7 +76,7 @@ export const ProductPage = () => {
                 <SizeBtn size={size} key={size} />
               ))}
             </div>
-            <button className="border py-2 px-4 uppercase cursor-pointer text-white bg-black w-[180px] my-2">
+            <button  className="border py-2 px-4 uppercase cursor-pointer text-white bg-black w-[180px] my-2">
               add to cart
             </button>
           </div>

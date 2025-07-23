@@ -10,6 +10,7 @@ import { DeliveryInfo } from "./pages/delivery_info/DeliveryInfo";
 import { Collection } from "./pages/collection_page/Collection";
 import { MyOrders } from "./pages/orders/MyOrders";
 import { ProductPage } from "./pages/productPage/ProductPage";
+import { MyCart } from "./pages/cart_page/Cart";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/collection" element={<Collection />} />
         <Route path="/my-orders" element={<MyOrders />} />
         <Route path="/product-page/:id" element={<ProductPage />} />
+        <Route path="/my-cart" element={<MyCart />} />
       </Routes>
       <Footer />
     </div>
