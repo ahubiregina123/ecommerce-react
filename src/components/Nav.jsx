@@ -57,10 +57,20 @@ const Nav = () => {
               />
               <NavLink to={"/my-cart"}>
                 <img
-                  className="cursor-pointer w-[20px] h-[20px]  justify-center items-center"
+                  className="cursor-pointer relative w-[20px] h-[20px]  justify-center items-center"
                   src={assets.vector}
                   alt=""
                 />
+                <div>
+                  <img
+                    className="absolute lg:top-[2.8%] lg:right-[12.1%] top-[2%] right-[19%] size-3.5"
+                    src={assets.ellipse_black}
+                    alt=""
+                  />
+                  <span className="absolute text-white text-[13px]  font-bold top-[1.7%] right-[20%]  lg:top-[2.4%] lg:right-[12.3%]">
+                    2
+                  </span>
+                </div>
               </NavLink>
             </div>
             <div className="lg:hidden">
@@ -74,7 +84,7 @@ const Nav = () => {
               />
             </div>
           </div>
-
+          {/* profile menu */}
           <div className="absolute top-[6%]">
             {showProfileMenu && (
               <ul className="bg-[#F8F8F8] text-[16px]  py-1.5 px-2.5  w-[170px]  ">
@@ -89,6 +99,7 @@ const Nav = () => {
               </ul>
             )}
           </div>
+          {/* side menu */}
           <div className="absolute top-[6%]">
             {showMenu && (
               <ul className="bg-[#F8F8F8] text-[16px]  py-1.5 px-2.5  w-[170px]  ">

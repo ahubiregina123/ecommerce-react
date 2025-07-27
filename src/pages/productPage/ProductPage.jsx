@@ -5,11 +5,30 @@ import {
   sizes,
 } from "../../assets/assets";
 import ProductCard from "../../components/ProductCard";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import useFilter from "../../hookes/useFilter";
+import useCartStore from "../../store/uesCartStore";
+import { useState } from "react";
+
 export const ProductPage = () => {
+  const [productName, setProductName] = useState("");
+  const [price, setPrice] = useState("");
+  const [img, setImg] = useState("");
+  const [size, setSize] = useState("");
+  const [date, setDate] = useState("");
+  const { cartInfo, setCartInfo } = useCartStore();
   const { product, description } = useFilter();
   // console.log(description);
+
+  const getCartInfo = () => {
+    setProductName(product.description);
+    setImg(product.image);
+    setPrice(product.price);
+    setSize("M");
+    setDate("27/7/25");
+    setCartInfo({ productName, img, price, date, size });
+    console.log(cartInfo);
+  };
 
   const relatedProducts = allCollections.filter((collection) => {
     return collection.description == description;
@@ -76,9 +95,14 @@ export const ProductPage = () => {
                 <SizeBtn size={size} key={size} />
               ))}
             </div>
-            <button  className="border py-2 px-4 uppercase cursor-pointer text-white bg-black w-[180px] my-2">
-              add to cart
-            </button>
+            <Link to={"/my-cart"}>
+              <button
+                onClick={getCartInfo}
+                className="border py-2 px-4 uppercase cursor-pointer text-white bg-black w-[180px] my-2"
+              >
+                add to cart
+              </button>
+            </Link>
           </div>
           <hr className="w-[450px] text-gray-300" />
           <div>
